@@ -1,0 +1,297 @@
+/* ===== Основные настройки ===== */
+
+body {
+    background-color: #E8E2D5;
+    font-family: 'Times New Roman', Times, Georgia, serif;
+    color: #353A3B;
+    margin: 0;
+}
+
+body.dark {
+    background-color: #171B20;
+    color: #B7B2A5;
+}
+
+/* ===== Шапка сайта ===== */
+
+header {
+    background-color: #D8D0C0;
+    padding-bottom: 15px;
+}
+
+body.dark header,
+body.dark .hero {
+    background-color: #252D35;
+}
+
+.divide {
+    background-color: #353A3B;
+    height: 1px;
+    border: none;
+}
+
+body.dark .divide {
+    background-color: #9C7635;
+}
+
+.header-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header-text {
+    text-align: center;
+    margin: 15px 0 5px;
+    font-size: 2rem;
+}
+
+#theme-button {
+    position: absolute;
+    right: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 35px;
+    color: #171B20;
+}
+
+#date-button {
+    position: absolute;
+    left: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, Georgia, serif;
+    color: #353A3B;
+}
+
+body.dark #date-button{
+    color:#B7B2A5;
+}
+/* ===== Навигация ===== */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.world{
+    gap: 100px;
+    margin-bottom: 20px;
+}
+a {
+    display: inline-block;
+    font-size: 20px;
+}
+
+a:link,
+a:visited {
+    color: #171B20;
+}
+
+body.dark a:link,
+body.dark a:visited {
+    color: #B7B2A5;
+}
+
+a:hover {
+    transform: scale(1.2);
+    color: #927747;
+}
+
+body.dark a:hover {
+    color: #B49A68;
+}
+
+/* ===== Основные блоки ===== */
+
+.hero {
+    margin: 50px;
+    padding-left: 20px;
+    border-radius: 10px;
+    background-color: #D8D0C0;
+    overflow: auto;
+}
+
+.hero h1 {
+    font-size: 220%;
+    margin: 5px 0;
+}
+
+.hero h2 {
+    font-size: 200%;
+    margin: 5px 0;
+}
+
+.hero h3 {
+    font-size: 180%;
+    margin: 5px 0;
+}
+
+.hero p {
+    font-size: 150%;
+    margin-top: 10px;
+}
+
+/* ===== Первый блок с обложкой ===== */
+
+.hero-text {
+    padding: 15px 250px 0 0;
+}
+
+.cover {
+    max-width: 20%;
+    height: auto;
+    float: left;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+/* ===== Блок о произведении ===== */
+
+.about p {
+    padding: 0 20px;
+}
+
+.about h1 {
+    margin-left: 20px;
+}
+
+.about table {
+    border-collapse: collapse;
+    width: 75%;
+    margin: 20px auto;
+}
+
+/* таблицы и списки */
+th,
+td {
+    border: 1px solid #777777;
+    padding: 10px;
+    text-align: center;
+}
+.column{
+    column-count: 2;
+    column-gap: normal;
+    font-size: 120%;
+}
+
+.columns li {
+      break-inside: avoid; 
+    }
+
+/* Карточки локаций */
+.location {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 20px;
+}
+
+.location img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.location h2 {
+    margin-top: 0;
+}
+
+
+.char {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+.char img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.char h3 {
+    margin-top: 0;
+}
+
+body.dark .char p{
+    color: #9C7635;
+}
+/* ===== Адаптация под телефон ===== */
+
+@media (max-width: 750px) {
+
+    .header-text {
+        font-size: 1.6rem;
+    }
+
+    #theme-button {
+        right: 15px;
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 25px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .world{
+        gap: 20px;
+    }
+    
+    .hero {
+        margin: 25px;
+    }
+
+    .hero-text {
+        padding-right: 50px;
+    }
+
+    .hero p {
+        padding-right: 50px;
+    }
+
+    .about table {
+        width: 95%;
+    }
+
+    .location {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .location img {
+        width: 100%;
+        height: auto;
+        max-height: 250px;
+    }
+
+    .char {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .char img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+    }
+}
+
