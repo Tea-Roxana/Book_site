@@ -23,6 +23,7 @@ b.onclick = () => {
         image.src = 'images/dark_theme_char.jpg';
         image.alt = 'Not Klein';
         t.textContent = 'Кажется, этот текст был украден :)';
+        t.style.color = '#9C7635';
     }else {
         localStorage.setItem('theme', 'light');
         b.textContent = '☽';
@@ -31,6 +32,7 @@ b.onclick = () => {
         image.src = 'images/light_theme_char.jpg';
         image.alt = 'Klein';
         t.textContent = 'Путь, связанный с тайнами, прорицанием и гаданием. Его последователи способны распознавать знаки судьбы, используя сновидения, карты и различные предзнаменования. По мере продвижения их духовное восприятие обостряется, а память становится лучше.';
+        t.style.color = '#353A3B';
     }
 };
 
